@@ -14,7 +14,7 @@ def afficher_personnage(joueur):
     for cle, valeur in joueur.items():
         if cle == "Attributs" :
             print("Attributs :")
-            for cle1, valeur1 in joueur["Attributs"].item():
+            for cle1, valeur1 in valeur.items():
                 print("-", cle1, ":", valeur1)
         else :
             print(cle, ":", valeur)
