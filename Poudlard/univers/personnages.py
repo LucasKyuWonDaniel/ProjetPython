@@ -10,3 +10,11 @@ def initialiser_personnage(nom, prenom, attributs):
     return personnage
 
 def afficher_personnage(joueur):
+    print("Profil du personnage :")
+    for cle, valeur in joueur.items():
+        if cle == "Attributs" :
+            print("Attributs :")
+            for cle1, valeur1 in joueur["Attributs"].item():
+                print("-", cle1, ":", valeur1)
+        else :
+            print(cle, ":", valeur)
