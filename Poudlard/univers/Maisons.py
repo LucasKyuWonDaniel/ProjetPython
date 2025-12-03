@@ -39,7 +39,7 @@ def repartition_maison(joueur, questions) :
       actualiser_points_maison(score_maisons, "Poufsouffle", valeur * 2)
     else :
       actualiser_points_maison(score_maisons, "Serdaigle", valeur * 2)
-  for i in question :
+  for i in questions :
     for j in range(len(i)):
       if j == 0 :
         print(i[j])
@@ -72,5 +72,6 @@ questions = [
         ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"] 
     ) 
 ]
+
 
 
