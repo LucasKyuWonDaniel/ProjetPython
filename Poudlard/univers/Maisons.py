@@ -45,10 +45,10 @@ def repartition_maison(joueur, questions) :
                 print(i[j])
             elif j == 1 :
                 for k in range(1, len(i[j]) + 1):
-                    print(k + "." + " " + i[j][k - 1])
+                    print(k, ".", i[j][k - 1])
             else :
                 réponse = int(input("Ton choix : "))
-                actualiser_points_maison(score_maisons, i[réponse - 1], 3)
+                actualiser_points_maison(score_maisons, i[j][réponse - 1], 3)
     print("Résumé des scores : ")
     for cle, valeur in score_maisons.items() :
         print(cle, ":", valeur, "points")
@@ -73,3 +73,4 @@ questions = [
     )
 
 ]
+
