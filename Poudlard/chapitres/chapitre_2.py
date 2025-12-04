@@ -13,6 +13,7 @@ def rencontrer_amis(joueur) :
         print("Ron sourit : — Génial ! Tu verras, Poudlard, c’est incroyable ! ")
     else :
         joueur["Attributs"]["ambition"] += 1
+        print("Ron : — Pas de probleme, mon pote !")
     
     print("Une fille entre ensuite, portant déjà une pile de livres.")
     print("— Bonjour, je m’appelle Hermione Granger. Vous avez déjà lu ‘Histoire de la Magie’ ?")
@@ -24,10 +25,31 @@ def rencontrer_amis(joueur) :
         réponse2 = int(input("Entrez une valeur correcte.))
     if réponse2 == 1 :
         joueur["Attributs"]["intelligence"] += 1
+        print("Hermione : — Super! Dans Histoire de la Magie, quel événement majeur Bathilda Tourdesac identifie-t-elle comme la cause première de l’adoption du Code International du Secret Magique ?")
+        input("")
     else :
         joueur["Attributs"]["courage"] += 1
-    print("Hermione fronce les sourcils : — Il faudrait pourtant s’y mettre un jour ! ")
-    print("")
-    print("")
-    print("")
-    print("")
+        print("Hermione fronce les sourcils : — Il faudrait pourtant s’y mettre un jour ! ")
+    
+    print("Puis un garçon blond entre avec un air arrogant.")
+    print("— Je suis Drago Malefoy. Mieux vaut bien choisir ses amis dès le départ, tu ne crois pas ?")
+    print("Comment réagissez-vous ? ")
+    print("1. Je lui serre la main poliment.")
+    print("2. Je l’ignore complètement.")
+    print("3. Je lui réponds avec arrogance.")
+    réponse3 = int(input("Votre choix :"))
+    while réponse3 != 1 or réponse3 != 2 :
+        réponse3 = int(input("Entrez une valeur correcte.))
+    if réponse3 == 1 :
+        joueur["Attributs"]["ambition"] += 1
+        print("Drago : — HaHaHa! ")
+    elif réponse3 == 2 :
+        joueur["Attributs"]["loyauté"] += 1
+        print("Drago fronce les sourcils, vexé : — Tu le regretteras !")
+    else :
+        joueur["Attributs"]["courage"] += 1
+        print("Drago : — Qui te crois tu ! ")
+    print("Le train continue sa route. Le château de Poudlard se profile à l’horizon... ")
+    print("Tes choix semblent déjà en dire long sur ta personnalité !")
+    print("Tes attributs mis à jour :", joueur["Atributs"])
+
