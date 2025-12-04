@@ -38,7 +38,7 @@ def rencontrer_amis(joueur) :
     print("2. Je l’ignore complètement.")
     print("3. Je lui réponds avec arrogance.")
     réponse3 = int(input("Votre choix :"))
-    while réponse3 != 1 and réponse3 != 2 :
+    while réponse3 < 1 or réponse3 > 3 :
         réponse3 = int(input("Entrez une valeur correcte."))
     if réponse3 == 1 :
         joueur["Attributs"]["ambition"] += 1
@@ -51,7 +51,8 @@ def rencontrer_amis(joueur) :
         print("Drago : — Qui te crois tu ! ")
     print("Le train continue sa route. Le château de Poudlard se profile à l’horizon... ")
     print("Tes choix semblent déjà en dire long sur ta personnalité !")
-    print("Tes attributs mis à jour :", joueur["Atributs"])
+    print("Tes attributs mis à jour :", joueur["Attributs"])
+
 
 
 
