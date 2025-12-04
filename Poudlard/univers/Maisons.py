@@ -33,9 +33,9 @@ def repartition_maison(joueur, questions) :
     for cle, valeur in joueur["Attributs"].items() :
         if cle == "courage" :
             actualiser_points_maison(score_maisons, "Gryffondor", valeur * 2)
-        elif cle == "Ambition" :
+        elif cle == "ambition" :
             actualiser_points_maison(score_maisons, "Serpentard", valeur * 2)
-        elif cle == "Loyauté" :
+        elif cle == "loyauté" :
             actualiser_points_maison(score_maisons, "Poufsouffle", valeur * 2)
         else :
             actualiser_points_maison(score_maisons, "Serdaigle", valeur * 2)
@@ -48,7 +48,7 @@ def repartition_maison(joueur, questions) :
                     print(k + "." + " " + i[j][k - 1])
             else :
                 réponse = int(input("Ton choix : "))
-                actualiser_points_maison(score_maisons, i[réponse - 1], valeur * 2)
+                actualiser_points_maison(score_maisons, i[réponse - 1], 3)
     print("Résumé des scores : ")
     for cle, valeur in score_maisons.items() :
         print(cle, ":", valeur, "points")
@@ -71,4 +71,5 @@ questions = [
         ["Fonces sans hésiter", "Cherches la meilleure stratégie", "Comptes sur tes amis", "Analyses le problème"],
         ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
     )
+
 ]
