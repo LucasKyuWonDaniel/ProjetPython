@@ -1,3 +1,5 @@
+from Poudlard.utils.input_utils import *
+
 def rencontrer_amis(joueur) :
     print("Vous montez à bord du Poudlard Express. Le train démarre lentement en direction du Nord... ")
     print("Un garçon roux entre dans votre compartiment, l’air amical.")
@@ -52,6 +54,7 @@ def rencontrer_amis(joueur) :
     print("Le train continue sa route. Le château de Poudlard se profile à l’horizon... ")
     print("Tes choix semblent déjà en dire long sur ta personnalité !")
     print("Tes attributs mis à jour :", joueur["Attributs"])
+
 
 
 
