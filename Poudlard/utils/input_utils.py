@@ -25,7 +25,7 @@ def demander_choix(phrase, choices):
     print(phrase)
     print()
     for i in range (len(choices)):
-        print(i +1, choices[i])
+        print("{}. {}".format(i+1, choices[i]))
         print()
     reponse = int(input())
     while reponse <= 0 or reponse >= len(choices):
