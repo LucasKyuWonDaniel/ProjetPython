@@ -1,11 +1,12 @@
 from Poudlard.utils.input_utils import *
 
-def actualiser_points_maison(maisons, nom_maison, points) :
-    if nom_maison in maisons :
+def actualiser_points_maison(maisons, nom_maison, points):
+    if nom_maison in maisons:
         maisons[nom_maison] += points
-        print (nom_maison, ":", maisons[nom_maison])
-    else :
-        return " la maison est introuvable"
+        print(nom_maison, ":", maisons[nom_maison])
+    else:
+        print("La maison est introuvable.")
+
 
 def afficher_maison_gagnante(maisons) :
     L_maison_gagnante = []
@@ -46,7 +47,7 @@ def repartition_maison(joueur, questions) :
             if j == 0 :
                 print(i[j])
             elif j == 1 :
-                réponse = demande_choix("Ton choix :", i[j])
+                réponse = demander_choix("Ton choix :", i[j])
             else :
                 actualiser_points_maison(score_maisons, i[j][réponse - 1], 3)
     print("Résumé des scores : ")
