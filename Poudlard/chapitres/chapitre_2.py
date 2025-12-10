@@ -84,9 +84,21 @@ def lancer_chapitre_2(personnage) :
     print("Les cours à Poudlard commenceront dès demain.")
     print("Prépare-toi pour une nouvelle aventure magique !")
 
+j1 = {
+    "Nom" : "SHIM" ,
+    "Prenom" : "Daniel" ,
+    "Argent" : 100,
+    "Inventaire" : ["couteau"],
+    "Sortilèges" : ["feu"] ,
+    "Attributs" : {"courage" : 3 ,
+    "intelligence" : 8 ,
+    "loyauté" : 6 ,
+    "ambition" : 4
+    }
+    }
 
 
-
+lancer_chapitre_2(j1)
 
 
 
