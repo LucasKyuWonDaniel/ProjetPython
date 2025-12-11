@@ -37,6 +37,21 @@ def apprendre_sorts(joueur, chemin_fichier="../data/sorts.json"):
                  if sorts[i]["nom"] == joueur["Sortilèges"][i] :
                      sorts[i]["description"]))
 
+j1 = {
+    "Nom" : "SHIM" ,
+    "Prenom" : "Daniel" ,
+    "Argent" : 100,
+    "Inventaire" : ["couteau"],
+    "Sortilèges" : ["feu"] ,
+    "Attributs" : {"courage" : 3 ,
+    "intelligence" : 8 ,
+    "loyauté" : 6 ,
+    "ambition" : 4
+    }
+    }
+
+
+
 def quiz_magie():
     return
 
