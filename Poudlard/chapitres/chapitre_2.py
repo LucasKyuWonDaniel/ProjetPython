@@ -61,10 +61,10 @@ def ceremonie_repartition(joueur) :
     print("Tu rejoins les élèves de", maison_gagnante, "sous les acclamations !")
 
 def installation_salle_commune(joueur) :
-    maison = load_fichier("data/maisons.json")
+    maison = load_fichier("../data/maisons.json")
     print("Vous suivez les préfets à travers les couloirs du château...")
     for cle1, valeur1 in maison.items() :
-        if cle1 == joueur["maison"] :
+        if cle1 == joueur["Maison"] :
             print(valeur1["emoji"], valeur1["description"])
             print(valeur1["message_installation"])
             print("Les couleurs de votre maison : {}, {}".format(valeur1["couleurs"][0], valeur1["couleurs"][1]))

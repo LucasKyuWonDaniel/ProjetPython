@@ -35,8 +35,8 @@ def demander_choix(phrase, choices):
     for i in range(len(choices)):
         print(f"{i + 1}. {choices[i]}")
     print()
-    reponse = demander_nombre("Votre choix : ", 1, len(choices))
-    return choices[reponse - 1]
+    reponse = int(demander_nombre("Votre choix : ", 1, len(choices)))
+    return reponse
 
 
 def load_fichier(chemin_fichier):
