@@ -41,6 +41,12 @@ def apprendre_sorts(joueur, chemin_fichier="../data/sorts.json"):
 def quiz_magie(joueur, chemin_fichier="../data/quiz_magie.json") :
     print("Bienvenue au quiz de magie de Poudlard !")
     print("Réponds correctement aux 4 questions pour faire gagner des points à ta maison.")
+    L_quiz = load_fichier(chemin_fichier)
+    
+    for i in range(1, 5) :
+        quiz = randint(0, 50)
+        print("{}.{}".format(i, L_quiz[quiz]))
+        reponse = str(input(
 
 j1 = {
     "Nom" : "SHIM" ,
