@@ -12,8 +12,8 @@ def initialiser_personnage(nom, prenom, attributs):
 def afficher_personnage(joueur) :
     print("Profil du personnage :")
     for cle, valeur in joueur.items():
-        if cle == "Attributs" :
-            print("Attributs :")
+        if type(valeur) == <class 'dict'> :
+            print(cle ,":")
             for cle1, valeur1 in valeur.items():
                 print("-", cle1, ":", valeur1)
         else :
