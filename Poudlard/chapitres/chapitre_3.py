@@ -19,12 +19,12 @@ def apprendre_sorts(joueur, chemin_fichier="../data/sorts.json"):
     utilitaire = 0
     while offensif != 1 and defensif != 1 and utilitaire != 3:
         sort = randint(0, 24)
-        if sorts[sort]["type"] == "Offenssif" and offensif == 0 :
+        if sorts[sort]["type"] == "Offenssif" and offensif != 1 :
             print("Tu viens d'apprendre le sortilège : {} ({})".format(sorts[sort]["nom"], sorts[sort]["type"]))
             sortileges.append(sorts[sort]["nom"])
             offensif += 1
             input("Appuie sur Entrée pour continuer...")
-        elif sorts[sort]["type"] == "Défensif" and defensif == 0 :
+        elif sorts[sort]["type"] == "Défensif" and defensif != 1 :
             print("Tu viens d'apprendre le sortilège : {} ({})".format(sorts[sort]["nom"], sorts[sort]["type"]))
             sortileges.append(sorts[sort]["nom"])
             defensif += 1
@@ -38,12 +38,12 @@ def apprendre_sorts(joueur, chemin_fichier="../data/sorts.json"):
     print("Tu as terminé ton apprentissage de base à Poudlard !")
     print("Voici les sortilèges que tu maîtrises désormais :")
     for i in range(5) :
+        for j in range(24) :
+            if sorts[j]["nom"] == joueur["Sortilèges"][i] :
+                type = sorts[j]["type"]
         for i in range(24) :
-            if sorts[i]["nom"] == joueur["Sortilèges"][i] :
-                type = sorts[i]["type"]
-        for i in range(24) :
-           if sorts[i]["nom"] == joueur["Sortilèges"][i] :
-                description = sorts[i]["description"]
+           if sorts[j]["nom"] == joueur["Sortilèges"][i] :
+                description = sorts[j]["description"]
         print("- {} ({}) : {}".format(joueur["Sortilèges"][i], type, description))
 
 
@@ -88,6 +88,7 @@ j1 = {
     "loyauté" : 6 ,
     "ambition" : 4
     }
+    "Maison" : "Serpentard"
     }
 
 lancer_chapitre_3(j1)
