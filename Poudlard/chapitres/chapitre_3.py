@@ -1,5 +1,7 @@
 from random import *
 from Poudlard.utils.input_utils import *
+from Poudlard.univers.Maisons import  *
+from Poudlard.univers.personnages import  *
 
 points_maisons = {
         "Gryffondor": 0,
@@ -55,7 +57,7 @@ def quiz_magie(joueur, chemin_fichier="../data/quiz_magie.json") :
         quiz = choice(L_quiz)
         while quiz in quiz_pose :
                 quiz = choice(L_quiz)
-        reponse = demander_phrase("{}. {}".format(i, quiz["question"]))
+        reponse = demander_texte("{}. {}".format(i, quiz["question"]))
         print(">", reponse)
         if reponse == quiz["reponse"] :
                 print("Bonne réponse ! +25 points pour ta maison.")
@@ -66,12 +68,12 @@ def quiz_magie(joueur, chemin_fichier="../data/quiz_magie.json") :
     print("Score obtenu :", score, "points")
     return score
         
-def lancer_chapitre_3(personnage, maisons) :
-        apprendre_sorts(joueur, chemin_fichier="../data/sorts.json")
-        score = quiz_magie(joueur, chemin_fichier="../data/quiz_magie.json")
-        actualiser_points_maison(points_maisons,joueur["Maison"], score)
+def lancer_chapitre_3(personnage) :
+        apprendre_sorts(personnage, chemin_fichier="../data/sorts.json")
+        score = quiz_magie(personnage, chemin_fichier="../data/quiz_magie.json")
+        actualiser_points_maison(points_maisons,personnage["Maison"], score)
         afficher_maison_gagnante(points_maisons)
-        afficher_personnage(joueur)
+        afficher_personnage(personnage)
 
 
 
@@ -87,4 +89,6 @@ j1 = {
     "ambition" : 4
     }
     }
+
+lancer_chapitre_3(j1)
 

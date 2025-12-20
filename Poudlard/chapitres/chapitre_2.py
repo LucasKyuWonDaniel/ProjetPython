@@ -1,14 +1,15 @@
 from Poudlard.utils.input_utils import *
 from Poudlard.univers.Maisons import *
 from Poudlard.univers.personnages import *
+from Poudlard.chapitres.chapitre_1 import *
 
 def rencontrer_amis(joueur) :
     print("Vous montez à bord du Poudlard Express. Le train démarre lentement en direction du Nord... ")
     print("Un garçon roux entre dans votre compartiment, l’air amical.")
     print("— Salut ! Moi c’est Ron Weasley. Tu veux bien qu’on s’assoie ensemble ? ")
-    L_réponse1 = ["Bien sûr, assieds-toi !", "Désolé, je préfère voyager seul."]
-    réponse1 = demander_choix("Que répondez-vous ?", L_réponse1)
-    if réponse1 == 1 :
+    L_reponse1 = ["Bien sûr, assieds-toi !", "Désolé, je préfère voyager seul."]
+    reponse1 = demander_choix("Que répondez-vous ?", L_reponse1)
+    if reponse1 == 1 :
         joueur["Attributs"]["loyauté"] += 1
         print("Ron sourit : — Génial ! Tu verras, Poudlard, c’est incroyable ! ")
     else :
@@ -17,9 +18,9 @@ def rencontrer_amis(joueur) :
     
     print("Une fille entre ensuite, portant déjà une pile de livres.")
     print("— Bonjour, je m’appelle Hermione Granger. Vous avez déjà lu ‘Histoire de la Magie’ ?")
-    L_réponse2 = ["Oui, j’adore apprendre de nouvelles choses !", "Euh… non, je préfère les aventures aux bouquins."]
-    réponse2 = demander_choix("Que répondez-vous ?", L_réponse2)
-    if réponse2 == 1 :
+    L_reponse2 = ["Oui, j’adore apprendre de nouvelles choses !", "Euh… non, je préfère les aventures aux bouquins."]
+    reponse2 = demander_choix("Que répondez-vous ?", L_reponse2)
+    if reponse2 == 1 :
         joueur["Attributs"]["intelligence"] += 1
         print("Hermione : — Super! Dans Histoire de la Magie, quel événement majeur Bathilda Tourdesac identifie-t-elle comme la cause première de l’adoption du Code International du Secret Magique ?")
         input("Votre réponse :")
@@ -29,12 +30,12 @@ def rencontrer_amis(joueur) :
     
     print("Puis un garçon blond entre avec un air arrogant.")
     print("— Je suis Drago Malefoy. Mieux vaut bien choisir ses amis dès le départ, tu ne crois pas ?")
-    L_réponse3 = ["Je lui serre la main poliment.", "Je l’ignore complètement.", "Je lui réponds avec arrogance."]
-    réponse3 = demander_choix("Comment réagissez-vous ?", L_réponse3)
-    if réponse3 == 1 :
+    L_reponse3 = ["Je lui serre la main poliment.", "Je l’ignore complètement.", "Je lui réponds avec arrogance."]
+    reponse3 = demander_choix("Comment réagissez-vous ?", L_reponse3)
+    if reponse3 == 1 :
         joueur["Attributs"]["ambition"] += 1
         print("Drago : — HaHaHa! ")
-    elif réponse3 == 2 :
+    elif reponse3 == 2 :
         joueur["Attributs"]["loyauté"] += 1
         print("Drago fronce les sourcils, vexé : — Tu le regretteras !")
     else :
@@ -83,21 +84,7 @@ def lancer_chapitre_2(personnage) :
     print("Les cours à Poudlard commenceront dès demain.")
     print("Prépare-toi pour une nouvelle aventure magique !")
 
-j1 = {
-    "Nom" : "SHIM" ,
-    "Prenom" : "Daniel" ,
-    "Argent" : 100,
-    "Inventaire" : ["couteau"],
-    "Sortilèges" : ["feu"] ,
-    "Attributs" : {"courage" : 3 ,
-    "intelligence" : 8 ,
-    "loyauté" : 6 ,
-    "ambition" : 4
-    }
-    }
-
-
-lancer_chapitre_2(j1)
+lancer_chapitre_2(personnage)
 
 
 

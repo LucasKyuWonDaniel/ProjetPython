@@ -47,9 +47,9 @@ def repartition_maison(joueur, questions) :
             if j == 0 :
                 print(i[j])
             elif j == 1 :
-                réponse = demander_choix("Ton choix :", i[j])
+                reponse = demander_choix("Ton choix :", i[j])
             else :
-                actualiser_points_maison(score_maisons, i[j][réponse - 1], 3)
+                actualiser_points_maison(score_maisons, i[j][reponse - 1], 3)
     print("Résumé des scores : ")
     for cle, valeur in score_maisons.items() :
         print(cle, ":", valeur, "points")

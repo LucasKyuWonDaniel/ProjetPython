@@ -69,7 +69,7 @@ def acheter_fournitures(personnage):
     while len(objets_obligatoires) > 0:
         print("\n Catalogue des objets disponibles :")
         for i in range(len(objets)):
-            print(f"{i + 1}. {objets[i]} - {prix[i]} galions")
+            print("{0}. {1} - {2} galions".format(i + 1, objets[i], prix[i]))
         print("Vous avez", personnage["Argent"], "galions.")
         print("Objets obligatoires restants :", objets_obligatoires)
         choix_objet = int(input("\n Quels objets voulez-vous acheter? : "))
@@ -80,7 +80,7 @@ def acheter_fournitures(personnage):
             exit()
         personnage["Argent"] -= cout
         personnage["Inventaire"].append(objets[choix_objet-1])
-        print("Vous avez acheté :", objets[choix_objet-1], f"(-{cout} galions).")
+        print("Vous avez acheté : {} (-{} galions).".format(objets[choix_objet - 1], cout))
 
         if objets[choix_objet-1] in objets_obligatoires:
             objets_obligatoires.remove(objets[choix_objet-1])
@@ -91,7 +91,7 @@ def acheter_fournitures(personnage):
     print("Il est temps de choisir votre animal de compagnie pour Poudlard !")
     print("Vous avez", personnage["Argent"], "galions.")
     for i in range(len(animaux)):
-        print(f"{i + 1}. {animaux[i]} - {prix_animaux[i]} galions")
+        print("{0}. {1} - {2} galions".format(i + 1, animaux[i], prix_animaux[i]))
 
     choix_animal = int(input("Quel animal voulez-vous ? :"))
     animal = animaux[choix_animal-1]
@@ -103,34 +103,22 @@ def acheter_fournitures(personnage):
 
     personnage["Argent"] -= cout_animal
     personnage["Inventaire"].append(animal)
-    print("Vous avez choisi :", animal, f"(-{cout_animal} galions).")
+    print("Vous avez choisi : {} (-{} galions).".format(animal, cout_animal))
 
-    print("Tous les objets obligatoires ont été achetés avec succès ! Voici votre inventaire final :")
+    print("Tous les objets obligatoires ont été achetés avec succès ! Voici votre inventaire final :", personnage["Inventaire"])
     afficher_personnage(personnage)
 
-j1 = {
-    "Nom" : "SHIM" ,
-    "Prenom" : "Daniel" ,
-    "Argent" : 100,
-    "Inventaire" : ["couteau"],
-    "Sortilèges" : ["feu"] ,
-    "Attributs" : {"courage" : 3 ,
-    "intelligence" : 8 ,
-    "loyauté" : 6 ,
-    "ambition" : 4
-    }
-    }
 
-
-def lancer_chapitre1(personnage):
+def lancer_chapitre1():
     introduction()
-    creer_personnage()
+    joueur1 = creer_personnage()
     recevoir_lettre()
     rencontrer_Hagrid()
-    acheter_fournitures(j1)
+    acheter_fournitures(joueur1)
     print("Fin du chapitre 1! Votre aventure commence à Poudlard...")
-    return j1
+    return joueur1
+
+lancer_chapitre1()
 
 
-lancer_chapitre1(j1)
 
