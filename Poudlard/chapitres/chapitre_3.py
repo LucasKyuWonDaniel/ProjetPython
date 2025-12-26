@@ -82,19 +82,6 @@ def lancer_chapitre_3(personnage) :
 
 
 
-j1 = {
-    "Nom" : "SHIM" ,
-    "Prenom" : "Daniel" ,
-    "Argent" : 100,
-    "Inventaire" : ["couteau"],
-    "Sortilèges" : ["feu"] ,
-    "Attributs" : {"courage" : 3 ,
-    "intelligence" : 8 ,
-    "loyauté" : 6 ,
-    "ambition" : 4
-    },
-    "Maison" : "Serpentard"
-    }
 
-lancer_chapitre_3(j1)
+
 

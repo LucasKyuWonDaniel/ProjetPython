@@ -84,7 +84,7 @@ def lancer_chapitre_2(personnage) :
     print("Les cours à Poudlard commenceront dès demain.")
     print("Prépare-toi pour une nouvelle aventure magique !")
 
-lancer_chapitre_2(personnage)
+
 
 
 

@@ -118,7 +118,7 @@ def lancer_chapitre1():
     print("Fin du chapitre 1! Votre aventure commence à Poudlard...")
     return joueur1
 
-lancer_chapitre1()
+
 
 
 
